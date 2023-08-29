@@ -1,0 +1,17 @@
+.joinpage {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.joinpage form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+}
+

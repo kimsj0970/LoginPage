@@ -1,0 +1,36 @@
+.main {
+  width : 100%;
+  text-align : center;
+  margin : 0 auto;
+  position: absolute; top: 40%;
+}
+.submain {
+  display: flex;
+  justify-content: center; /* 가로 방향 가운데 정렬 */
+  align-items: center; /* 세로 방향 가운데 정렬 */
+  margin-left: 220px;
+}
+.submain2{
+  position: absolute;
+  display: flex;
+  top:46px;
+  margin-bottom: 0px;
+  margin-left: 650px;
+}
+
+
+.submain button {
+  margin: 0 20px; /* 버튼 사이의 간격을 설정할 수 있습니다 */
+}
+
+.main label {
+  display: inline-block;
+  width: 100px; /* 레이블 너비를 조정해주세요 */
+  text-align: right;
+  margin-right: 10px; /* 레이블과 입력 요소 사이의 간격을 조정해주세요 */
+}
+
+.main input {
+  display: inline-block;
+  width: 200px; /* 입력 요소 너비를 조정해주세요 */
+}
