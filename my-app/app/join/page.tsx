@@ -10,7 +10,7 @@ type Member = {
 
 export default function JoinFront(){
     let [inputs, setInputs] = useState({
-    id: '',
+    userid: '',
     email: '',
     password:'',
     repassword:''
@@ -34,7 +34,7 @@ export default function JoinFront(){
         <div className='joinpage'>
             <form action={"/api/make/server"} method="POST" onSubmit={passwordcheck}>
                 <label>아이디</label>
-                <input type='text' name='id' onChange={setchange}></input>
+                <input type='text' name='userid' onChange={setchange}></input>
                 <br></br>
                 이메일<input type="email" name='email' onChange={setchange}></input>
                 <br></br>
@@ -45,7 +45,7 @@ export default function JoinFront(){
                 <br></br>
                 <button type="submit">회원가입</button>
             </form>
-            {inputs.id}<br></br>
+            {inputs.userid}<br></br>
             {inputs.email}<br></br>
             {inputs.password}<br></br>
             {inputs.repassword}

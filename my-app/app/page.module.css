@@ -2,26 +2,35 @@
   width : 100%;
   text-align : center;
   margin : 0 auto;
-  position: absolute; top: 40%;
+  position: absolute; 
+  top: 40%;
 }
-.submain {
+
+.container {
   display: flex;
-  justify-content: center; /* 가로 방향 가운데 정렬 */
-  align-items: center; /* 세로 방향 가운데 정렬 */
-  margin-left: 220px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; /* 내부 컨테이너의 내용을 가로로 가운데 정렬 */
+  margin-top: 20px; /* 위쪽 여백 추가 */
 }
-.submain2{
-  position: absolute;
-  display: flex;
-  top:46px;
-  margin-bottom: 0px;
-  margin-left: 650px;
+.button-container {
+  display: flex; /* 추가된 부분 */
+  justify-content: center; /* 추가된 부분 */
+  margin-top: 20px; /* 추가된 부분 */
+}
+.button1,
+.button2 {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 
-.submain button {
-  margin: 0 20px; /* 버튼 사이의 간격을 설정할 수 있습니다 */
-}
+
+
 
 .main label {
   display: inline-block;
