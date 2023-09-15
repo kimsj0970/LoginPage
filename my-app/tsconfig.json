@@ -24,6 +24,6 @@
     }
   },
   
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "server.tsx", "DBconnect.tsx", "app/page.tsx", "app/join/get.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "server.tsx", "DBconnect.tsx", "app/page.tsx", "app/JoinPage/get.js"],
   "exclude": ["node_modules"]
 }

@@ -8,17 +8,24 @@ type Member = {
 
     export default function handler(req:any,res:any):any{
         if(req.method=='POST'){
-            console.log(req.body)
             let {userid, email,password}:Member = req.body
-            db.query('INSERT INTO user (userid,email,password) values(?,?,?)',[userid,email,password]),
-            (error:any, results:Member):Member=> {
-              if (error) {
-                console.log('에러')
-                return res.status(500).json({ message: 'DB 저장 에러' });
+            try {
+                // 데이터베이스 쿼리 실행
+                db.query('INSERT INTO user (userid,email,password) values(?,?,?)', [userid, email, password], (error: any, results: Member) => {
+                  if (error) {
+                    res.status(500).json('DB 저장 에러');
+                  } else {
+                    res.status(200).redirect(301,'/SuccessPage')
+                  }
+                });
+              } catch (error) {
+                // 오류 처리
+                console.error('오류 발생:', error);
+                res.status(500).json('서버 오류');
               }
-                else{
-                  console.log('DB저장 성공')
-                  return res.status(200).json(results)
-                }
-           }}
-        };
+            }
+        }
+
+
+
+          
